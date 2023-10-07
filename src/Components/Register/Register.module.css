@@ -1,0 +1,66 @@
+.Formulario{
+    margin: 2% 2%;
+    padding: 0 2%;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    max-width: 300px;
+}
+
+.DatePicker {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    width: 100%;
+    background-color: #EBE9F2;
+    color: #6a6a6a;
+}
+
+.Tipo, .Categoria, .Subcategoria, .Option, .Check, .Refeicao {
+    width: 100%;
+    padding: 0.3rem;
+    margin: 10px 0;
+    border: none;
+    background: #EBE9F2;
+    border-radius: var(--card-border-radius);
+    text-align: center;
+    font-size: 0.8em;
+    color: #6a6a6a;
+}
+
+.Tipo, .Categoria, .Subcategoria, .Check, .Refeicao {
+    background: #EBE9F2;
+    margin: 2.5px 0;
+    text-align-last: center;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+}
+
+.Option{
+    margin: 5px 0;
+}
+
+.Button {
+    width: 100%;
+    padding: 0.3rem;
+    margin: 0 0 15px 0;
+
+    background-color: #43A047;
+    color: white;
+    
+    border-radius: var(--card-border-radius);
+    border: none;
+    cursor: pointer;
+    
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 975px) {
+    .Formulario{
+        max-width: 350px;
+        width: 600px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,75 @@
+.collapsible-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: inherit; /* Set a maximum height for the content */
+    margin-top: 5px;
+}
+  
+.collapsible-button.collapsed {
+    max-height: 55px;
+}
+  
+.toggle-button {
+    padding: 0.3rem;
+    margin: 15px 0 15px 0;
+    border: none;
+    background: #EBE9F2;
+    border-radius: var(--card-border-radius);
+    text-align: center;
+    font-size: 0.8em;
+    width: 65%;
+    color: #000;
+    cursor: pointer;
+}
+
+.collapsible-buttonC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: inherit; /* Set a maximum height for the content */
+    margin-top: 5px;
+}
+  
+.collapsible-buttonC.collapsedC {
+    max-height: 55px;
+}
+  
+.toggle-buttonC {
+    padding: 0.3rem;
+    margin: 15px 0 15px 0;
+    border: none;
+    background: #EBE9F2;
+    border-radius: var(--card-border-radius);
+    text-align: center;
+    font-size: 0.8em;
+    width: 65%;
+    color: #000;
+    cursor: pointer;
+}
+
+.Side{
+    max-width: 300px;
+    min-width: 200px;
+    text-align: center;
+}
+
+@media screen and (max-width: 975px) {
+    .Side{
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .toggle-button{
+        width: 350px;
+      }
+
+    .toggle-buttonC{
+        width: 350px;
+      }
+}

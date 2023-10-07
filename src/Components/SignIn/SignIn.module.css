@@ -1,0 +1,66 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.formContainer{
+  margin: auto;
+  width: auto;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: lightslategray;
+}
+
+.log_inp{
+    width: 230px;
+    text-align: center;
+    margin: 5px 50px 5px 50px;
+    border-radius: 15px;
+    height: 30px;
+    background-color: lightgray;
+    border: none;
+}
+
+.log_but{
+    width: 230px;
+    height: 30px;
+    margin: 5px 50px 20px 50px;
+    border-radius: 15px;
+    background-color: lightgray;
+    box-shadow: none;
+    border: none;
+    color: black;
+    text-decoration: double;
+}
+
+.error{
+    color: rgb(255, 47, 0);
+}
+
+@media screen and (max-width: 770px) {
+    .login{
+        padding: 100px 0;
+    }
+    .formContainer{
+        width: 300px
+    }
+    .log_inp{
+        align-items: center;
+        width: 195px;
+        margin: 10px 40px 10px 40px;
+    }
+    .log_but{
+        align-items: center;
+        width: 195px;
+        margin: 10px 40px 20px 40px;
+    }
+
+    .Welcome{
+        font-weight: 100;
+    }
+}

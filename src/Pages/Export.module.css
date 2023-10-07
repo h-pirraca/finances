@@ -1,0 +1,41 @@
+.Formulario{
+    margin: 2% 2%;
+    padding: 0 2%;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    max-width: 300px;
+}
+
+.DatePicker {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    width: 100%;
+    background-color: #EBE9F2;
+    color: #6a6a6a;
+}
+
+.Button {
+    margin: 5px 0;
+    width: 100%;
+    padding: 0.3rem;
+
+    background-color: #43A047;
+    color: white;
+    
+    border-radius: var(--card-border-radius);
+    border: none;
+    cursor: pointer;
+    
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 975px) {
+    .Formulario{
+        max-width: 350px;
+        width: 600px;
+        text-align: center;
+    }
+}

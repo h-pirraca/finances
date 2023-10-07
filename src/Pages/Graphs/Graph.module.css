@@ -1,0 +1,44 @@
+.Top{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 80% 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+.Article{
+    width: 100%;   
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Side{
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+
+.DatePicker {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    background-color: #EBE9F2;
+    color: #6a6a6a;
+}
+
+.DatePickerW {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    background-color: #EBE9F2;
+    color: #EBE9F2;
+}
+
+@media screen and (max-width: 975px) {
+    .Top {
+      grid-template-columns: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+}

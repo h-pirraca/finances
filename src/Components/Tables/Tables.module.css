@@ -1,0 +1,26 @@
+.categories{
+    margin-top: 1rem;
+}
+
+.categories{
+    background: white;
+    width: 100%;
+    border-radius: 15px;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 3px;
+}
+
+.tablerow {
+    border-bottom: 0.5px solid lightgray;
+    margin: 2px 0px 2px 0px;
+}
+
+.redtext {
+    color: red;
+}
+
+.greentext {
+    color: green
+}

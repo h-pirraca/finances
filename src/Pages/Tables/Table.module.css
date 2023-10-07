@@ -1,0 +1,27 @@
+.Article{
+    flex-grow: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Table{
+    width: 90%;
+}
+
+.DatePicker {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    background-color: #EBE9F2;
+    color: #6a6a6a;
+}
+
+.DatePickerW {
+    border: none;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    background-color: #EBE9F2;
+    color: #EBE9F2;
+}

@@ -1,0 +1,54 @@
+.Main{
+    display: flex;
+    flex-direction: row;
+}
+
+.Article{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 80% 20%;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.Side{
+  margin-right: 5px;
+}
+
+.First{
+  margin-top: 20px;
+  padding: 0 10px 0 20px;
+}
+
+.Second{
+  margin-top: 20px;
+  padding: 0 20px 0 10px;
+  text-align: cemter;
+  text-wrap: nowrap;
+}
+
+.Second > h4 {
+  font-weight: 200;
+}
+
+.content{
+    width: 100%;
+}
+
+@media screen and (max-width: 975px) {
+    .Main {
+      flex-wrap: wrap;
+    }
+
+    .Article {
+      grid-template-columns: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .First > h4, 
+    .Second{
+      text-align: center;
+    }
+}
