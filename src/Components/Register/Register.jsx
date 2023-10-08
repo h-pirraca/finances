@@ -179,12 +179,11 @@ const Register = () => {
       // Reset the form by updating the state values to their initial state
       setUsername('')
       setSelectedTipo('');
-      setSelectedCategoria('');
-      setSelectedSub('');
-      setSelectedDespesaType('');
-      setValor('');
+      //setSelectedCategoria('');
+      //setSelectedSub('');
+      //setSelectedDespesaType('');
+      //setValor('');
       setSelectedDate(new Date());
-      setDescricao('');
 
   } catch (err) {
     console.log("Failed to register: " + err);
@@ -205,7 +204,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedTipo} onChange={handleTipoChange} className={Reg.Tipo} required>
+          <select value={selectedTipo} onChange={handleTipoChange} className={Reg.Tipo}>
             <option value="">Tipo</option>
             {tipoOptions.map((tipo) => (
               <option key={tipo.id} value={tipo.id}>
@@ -215,7 +214,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedCategoria} onChange={handleCategoriaChange} className={Reg.Categoria} required>
+          <select value={selectedCategoria} onChange={handleCategoriaChange} className={Reg.Categoria}>
             <option value="">Categoria</option>
             {categoriaOptions[selectedTipo]?.map((categoria) => (
               <option key={categoria} value={categoria}>
@@ -225,7 +224,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedSub} onChange={handleSubChange} className={Reg.Subcategoria} required>
+          <select value={selectedSub} onChange={handleSubChange} className={Reg.Subcategoria}>
             <option value="">Subcategoria</option>
             {subcategoriaOptions[selectedCategoria]?.map((subcategoria) => (
               <option key={subcategoria} value={subcategoria}>
@@ -248,7 +247,7 @@ const Register = () => {
         )*/}
         {selectedTipo === 'Despesas' && (
         <div>
-          <select value={selectedDespesaType} onChange={handleDespesaTypeChange} className={Reg.Tipo} required>
+          <select value={selectedDespesaType} onChange={handleDespesaTypeChange} className={Reg.Tipo}>
             <option value="">Subtipo</option>
             {subTipoOptions.map((subtipo) => (
               <option key={subtipo.id} value={subtipo.id}>

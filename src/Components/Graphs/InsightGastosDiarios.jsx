@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
 import IGD from './IGD.module.css';
+
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { BarChart } from '@mui/icons-material';
@@ -95,14 +97,14 @@ const InsightGastosDiarios = () => {
 
       setState((prevState) => ({
         ...prevState,
-        totalC: data.rows[0].total,
-        totalH: data.rows[1].total,
-        totalN: data.rows[2].total,
+        totalC: data[0].total,
+        totalH: data[1].total,
+        totalN: data[2].total,
       }));
 
-      const somaC = parseFloat(data.rows[1].total) + parseFloat(data.rows[2].total);
-      const somaH = parseFloat(data.rows[0].total) + parseFloat(data.rows[2].total);
-      const somaN = parseFloat(data.rows[0].total) + parseFloat(data.rows[1].total);
+      const somaC = parseFloat(data[1].total) + parseFloat(data[2].total);
+      const somaH = parseFloat(data[0].total) + parseFloat(data[2].total);
+      const somaN = parseFloat(data[0].total) + parseFloat(data[1].total);
 
       setState((prevState) => ({
         ...prevState,

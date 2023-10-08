@@ -7,6 +7,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { BarChart } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 import { amber, deepOrange, lightBlue } from '@mui/material/colors';
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const InsightGastosMensais = () => {
