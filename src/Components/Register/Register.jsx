@@ -205,7 +205,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedTipo} onChange={handleTipoChange} className={Reg.Tipo}>
+          <select value={selectedTipo} onChange={handleTipoChange} className={Reg.Tipo} required>
             <option value="">Tipo</option>
             {tipoOptions.map((tipo) => (
               <option key={tipo.id} value={tipo.id}>
@@ -215,7 +215,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedCategoria} onChange={handleCategoriaChange} className={Reg.Categoria}>
+          <select value={selectedCategoria} onChange={handleCategoriaChange} className={Reg.Categoria} required>
             <option value="">Categoria</option>
             {categoriaOptions[selectedTipo]?.map((categoria) => (
               <option key={categoria} value={categoria}>
@@ -225,7 +225,7 @@ const Register = () => {
           </select>
         </div>
         <div>
-          <select value={selectedSub} onChange={handleSubChange} className={Reg.Subcategoria}>
+          <select value={selectedSub} onChange={handleSubChange} className={Reg.Subcategoria} required>
             <option value="">Subcategoria</option>
             {subcategoriaOptions[selectedCategoria]?.map((subcategoria) => (
               <option key={subcategoria} value={subcategoria}>
@@ -248,7 +248,7 @@ const Register = () => {
         )*/}
         {selectedTipo === 'Despesas' && (
         <div>
-          <select value={selectedDespesaType} onChange={handleDespesaTypeChange} className={Reg.Tipo}>
+          <select value={selectedDespesaType} onChange={handleDespesaTypeChange} className={Reg.Tipo} required>
             <option value="">Subtipo</option>
             {subTipoOptions.map((subtipo) => (
               <option key={subtipo.id} value={subtipo.id}>
@@ -269,7 +269,7 @@ const Register = () => {
             dateFormat="dd/MM/yyyy"
           />
         </div>
-        <input descricao={descricao} onChange={handleDescricaoChange} type="text" className={Reg.Option} placeholder="Descrição" pattern="[^()/><\][\\\x22,;|]+" name="Descricao" />
+        <input descricao={descricao} onChange={handleDescricaoChange} type="text" className={Reg.Option} placeholder="Descrição" pattern="[^()/><\][\\\x22,;|]+" name="Descricao"/>
         <br />
         <button type="submit" onClick={handleSubmit} className={Reg.Button}>
           Registar
