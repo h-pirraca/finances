@@ -179,10 +179,10 @@ const Register = () => {
       // Reset the form by updating the state values to their initial state
       setUsername('')
       setSelectedTipo('');
-      //setSelectedCategoria('');
-      //setSelectedSub('');
-      //setSelectedDespesaType('');
-      //setValor('');
+      setSelectedCategoria('');
+      setSelectedSub('');
+      setSelectedDespesaType('');
+      setValor('');
       setSelectedDate(new Date());
 
   } catch (err) {
