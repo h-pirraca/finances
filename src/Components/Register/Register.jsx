@@ -176,6 +176,7 @@ const Register = () => {
           throw new Error('Invalid data.');
       }
 
+      alert("Registo efetuado com sucesso");
       // Reset the form by updating the state values to their initial state
       setUsername('')
       setSelectedTipo('');
