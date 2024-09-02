@@ -42,6 +42,11 @@ const GraphIncome = () => {
         label: 'Nuno Kakoo',
         data: [],
         backgroundColor: deepOrange[600],
+      },
+      {
+        label: 'Casa',
+        data: [],
+        backgroundColor: lightBlue[600],
       }
     ],
   });
@@ -54,6 +59,10 @@ const GraphIncome = () => {
       },
       {
         username: 'Nuno Kakoo',
+        valor: '',
+      },
+      {
+        username: 'Casa',
         valor: '',
       },
     ],
@@ -131,6 +140,7 @@ const GraphIncome = () => {
   useEffect(() => {
     fetchData('hpirraca', 0, 'Hugo Pirraça'); // Change 'New Label 1' to the desired label
     fetchData('nunokakoo', 1, 'Nuno Kakoo'); // Change 'New Label 2' to the desired label
+    fetchData('casa', 2, 'Casa'); // Change 'New Label 2' to the desired label
   }, [selectedDate]);
 
   useEffect(() => {
