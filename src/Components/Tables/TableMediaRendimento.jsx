@@ -4,7 +4,7 @@ import TCSS from './Tables.module.css'
 
 const TableMediaRendimento = (props) => {
   const total = parseFloat(props.valor[0].valor) +
-    parseFloat(props.valor[1].valor); 
+    parseFloat(props.valor[1].valor) + parseFloat(props.valor[2].valor); 
   return (
         <div >
             <table className={TCSS.categories}>
