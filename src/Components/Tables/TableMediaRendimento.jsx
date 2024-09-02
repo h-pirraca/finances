@@ -23,6 +23,10 @@ const TableMediaRendimento = (props) => {
                     <td>{props.valor[1].username}</td>
                     <td>{parseFloat(props.valor[1].valor).toFixed(2)} €</td>
                 </tr>
+                <tr className={TCSS.tablerow}>
+                    <td>{props.valor[2].username}</td>
+                    <td>{parseFloat(props.valor[2].valor).toFixed(2)} €</td>
+                </tr>
                 <tr>
                     <td><b>Total</b></td>
                     <td>{total.toFixed(2)} €</td>
