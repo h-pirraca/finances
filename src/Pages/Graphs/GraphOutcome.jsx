@@ -109,9 +109,11 @@ const GraphIncome = () => {
       let sum = 0;
       let count = 0;
 
-      result.forEach(row => {
-        sum += parseFloat(row.valor);
-        count++;
+      result.forEach((row, index) => {
+        if (index < result.length - 1) {
+          sum += parseFloat(row.valor);
+          count++;
+        }
       });
   
       if (count > 0) {

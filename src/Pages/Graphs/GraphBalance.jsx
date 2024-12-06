@@ -91,20 +91,32 @@ const GraphBalance = () => {
       let sum = 0;
       let count = 0;
 
+      let sumMinusCurrentMonth = 0;
+      let countMinusCurrentMonth = 0;
+
       result.forEach(row => {
         sum += parseFloat(row.valor);
         count++;
       });
   
+      result.forEach((row, index) => {
+        if (index < result.length - 1) {
+            sumMinusCurrentMonth += parseFloat(row.valor);
+            countMinusCurrentMonth++;
+        }
+      });
+
       if (count > 0) {
         var averageValue = sum / count;
+        var averageValueMinusCurrentMonth = sumMinusCurrentMonth/countMinusCurrentMonth;
       } else {
         console.log('No data found for the current year.');
       }
 
       setState((prevState) => ({
         ...prevState,
-        mediaB: averageValue,
+        mediaB: averageValue, 
+        mediaBMCM : averageValueMinusCurrentMonth,
       }));
     } catch (error) {
       console.error('Error:', error);
@@ -153,6 +165,9 @@ const GraphBalance = () => {
       <div className={GraphCSS.Side}>
         <h5><b>Valor Médio Mensal</b></h5>
             <Tables valor={state.mediaB} total={'Total'}/>
+        <br/>
+        <h5><b>Valor Balanço/Mês M-1</b></h5>
+            <Tables valor={state.mediaBMCM} total={'Total'}/>
         <br/>
       </div>
     </div>
