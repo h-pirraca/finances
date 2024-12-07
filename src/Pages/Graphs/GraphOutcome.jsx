@@ -182,6 +182,7 @@ const GraphIncome = () => {
       <div className={GraphCSS.Side}>
       <h5><b>Valor Médio Mensal</b></h5>
         <TableMediaDespesas valor={total.datasets} user={'Utilizador'} total={'Total'}/>
+        <p><b>Valor atualizado até ao mês anterior</b></p>
       </div>
     </div>
   );

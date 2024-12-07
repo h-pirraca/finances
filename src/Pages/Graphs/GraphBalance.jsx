@@ -163,11 +163,12 @@ const GraphBalance = () => {
         </div>
       </div>
       <div className={GraphCSS.Side}>
-        <h5><b>Valor Médio Mensal</b></h5>
+        <h5><b>Balanço Médio Mensal Atual</b></h5>
             <Tables valor={state.mediaB} total={'Total'}/>
         <br/>
-        <h5><b>Valor Balanço/Mês M-1</b></h5>
+        <h5><b>Balanço Médio Mensal Mês-1</b></h5>
             <Tables valor={state.mediaBMCM} total={'Total'}/>
+        <p><b>Valor atualizado até ao mês anterior</b></p>
         <br/>
       </div>
     </div>
