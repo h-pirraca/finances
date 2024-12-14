@@ -49,29 +49,29 @@ const GraphBalance = () => {
   const chartRef = useRef(null);
 
   const fetchData = async (index, label) => {
-    
+
     try {
       const monthNames = [
         'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
         'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
       ];
-      
-      const response = await fetch(process.env.REACT_APP_SERVER_LINK+'/graphBalance', {
+
+      const response = await fetch(process.env.REACT_APP_SERVER_LINK + '/graphBalance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ date: selectedDate.toISOString() }),
       });
-  
+
       if (!response.ok) {
         throw new Error('Network response was not ok' + response);
       }
-  
+
       const result = await response.json();
       const labels = result.map(item => monthNames[item.month - 1]);
       const chartData = result.map(item => item.valor);
-  
+
       const backgroundColors = chartData.map(value => {
         return value >= 0 ? green[600] : red[600];
       });
@@ -98,31 +98,31 @@ const GraphBalance = () => {
         sum += parseFloat(row.valor);
         count++;
       });
-  
+
       result.forEach((row, index) => {
         if (index < result.length - 1) {
-            sumMinusCurrentMonth += parseFloat(row.valor);
-            countMinusCurrentMonth++;
+          sumMinusCurrentMonth += parseFloat(row.valor);
+          countMinusCurrentMonth++;
         }
       });
 
       if (count > 0) {
         var averageValue = sum / count;
-        var averageValueMinusCurrentMonth = sumMinusCurrentMonth/countMinusCurrentMonth;
+        var averageValueMinusCurrentMonth = sumMinusCurrentMonth / countMinusCurrentMonth;
       } else {
         console.log('No data found for the current year.');
       }
 
       setState((prevState) => ({
         ...prevState,
-        mediaB: averageValue, 
-        mediaBMCM : averageValueMinusCurrentMonth,
+        mediaB: averageValue,
+        mediaBMCM: averageValueMinusCurrentMonth,
       }));
     } catch (error) {
       console.error('Error:', error);
     }
   };
-  
+
   // Call the fetchData function with the desired label for each dataset
   useEffect(() => {
     fetchData(0, 'Balanço'); // Change 'New Label 1' to the desired label
@@ -164,12 +164,11 @@ const GraphBalance = () => {
       </div>
       <div className={GraphCSS.Side}>
         <h5><b>Balanço Médio Mensal Atual</b></h5>
-            <Tables valor={state.mediaB} total={'Total'}/>
-        <br/>
+        <Tables valor={state.mediaB} total={'Total'} />
+        <br />
         <h5><b>Balanço Médio Mensal Mês-1</b></h5>
-            <Tables valor={state.mediaBMCM} total={'Total'}/>
-        <p><b>Valor atualizado até ao mês anterior</b></p>
-        <br/>
+        <Tables valor={state.mediaBMCM} total={'Total'} />
+        <br />
       </div>
     </div>
   );
