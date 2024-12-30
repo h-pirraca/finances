@@ -14,7 +14,8 @@ const SideMenu = ({ onLogout }) => {
     const initialIndex = 
           window.location.pathname === '/' ? 0 
         : window.location.pathname === '/tableDaily' ? 1 
-        : window.location.pathname === '/tableMonthly' ? 2 
+        : window.location.pathname === '/tableMonthly' ? 2
+        : window.location.pathname === '/tableAnual' ? 10 
         : window.location.pathname === '/tableSumSubtipo' ? 3 
         : window.location.pathname === '/tableSumSubcategoria' ? 4
         : window.location.pathname === '/graphMonthly' ? 5 
@@ -78,6 +79,7 @@ const SideMenu = ({ onLogout }) => {
                 <SubMenu icon={<TableChartOutlined/>} label="Tabela">
                     <MenuItem active={activeIndex === 1} component={<Link to="/tableDaily" onClick={() => setActiveIndex(1)} />} icon={<TodayOutlined/>}>Diária</MenuItem>
                     <MenuItem active={activeIndex === 2} component={<Link to="/tableMonthly" onClick={() => setActiveIndex(2)} />} icon={<CalendarMonthOutlined/>}>Mensal</MenuItem>
+                    <MenuItem active={activeIndex === 10} component={<Link to="/tableYearly" onClick={() => setActiveIndex(10)} />} icon={<CalendarMonthOutlined/>}>Anual</MenuItem>
                     <MenuItem active={activeIndex === 3} component={<Link to="/tableSumSubtipo" onClick={() => setActiveIndex(3)} />} icon={<><FunctionsOutlined/><TodayOutlined/></>}>Soma Subtipo</MenuItem>
                     <MenuItem active={activeIndex === 4} component={<Link to="/tableSumSubcategoria" onClick={() => setActiveIndex(4)} />} icon={<><FunctionsOutlined/><CalendarMonthOutlined/></>}>Soma Subcategorias</MenuItem>
                 </SubMenu>

@@ -24,6 +24,7 @@ const Navigation = ({ onLogout }) => {
               <Route index element={<Main />} />
               <Route path="/tableDaily" element={<TableDaily />} />
               <Route path="/tableMonthly" element={<TableMonthly />} />
+              <Route path="/tableYearly" element={<TableYearly />} />
               <Route path="/tableSumSubtipo" element={<TableSumSubtipo />} />
               <Route path="/tableSumSubcategoria" element={<TableSumSubcategoria />} />
               <Route path="/graphMonthly" element={<GraphMonthly />} />
