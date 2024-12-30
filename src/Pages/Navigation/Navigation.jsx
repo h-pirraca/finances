@@ -5,6 +5,7 @@ import SideMenu from '../../Components/SideMenu/SideMenu';
 import Main from '../Main/Main';
 import TableDaily from '../Tables/TableDaily';
 import TableMonthly from '../Tables/TableMonthly';
+import TableYearly from '../Tables/TableYearly';
 import TableSumSubtipo from '../Tables/TableSumSubtipo';
 import TableSumSubcategoria from '../Tables/TableSumSubcategorias';
 import GraphMonthly from '../Graphs/GraphMonthly';
