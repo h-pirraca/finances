@@ -11,7 +11,7 @@ import "mdbreact/dist/css/mdb.css";
 
 import TableCSS from './Table.module.css'
 
-class TableMonthly extends Component {
+class TableYearly extends Component {
   constructor(){
     super();
     this.state = {
@@ -121,7 +121,7 @@ class TableMonthly extends Component {
             selected={this.state.selectedDate}
             onChange={this.handleDateChange}
             dateFormat="yyyy"
-            showMonthYearPicker
+            showYearPicker
             peekNextMonth
             showYearDropdown
             scrollableYearDropdown
@@ -140,4 +140,4 @@ class TableMonthly extends Component {
   }
 }
 
-export default TableMonthly
+export default TableYearly
