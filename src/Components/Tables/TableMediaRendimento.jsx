@@ -3,8 +3,14 @@ import React from 'react'
 import TCSS from './Tables.module.css'
 
 const TableMediaRendimento = (props) => {
+    var casa = 0;
+    if (isNaN(props.valor[2].valor)) {
+        casa = 0
+    } else {
+        casa = props.valor[2].valor
+    }
   const total = parseFloat(props.valor[0].valor) +
-    parseFloat(props.valor[1].valor) + parseFloat(props.valor[2].valor); 
+    parseFloat(props.valor[1].valor) + parseFloat(casa); 
   return (
         <div >
             <table className={TCSS.categories}>
@@ -25,7 +31,7 @@ const TableMediaRendimento = (props) => {
                 </tr>
                 <tr className={TCSS.tablerow}>
                     <td>{props.valor[2].username}</td>
-                    <td>{parseFloat(props.valor[2].valor).toFixed(2)} €</td>
+                    <td>{parseFloat(casa).toFixed(2)} €</td>                   
                 </tr>
                 <tr>
                     <td><b>Total</b></td>
