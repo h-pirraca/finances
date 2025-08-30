@@ -221,7 +221,7 @@ const GraphMonthly = () => {
         <TableMes valor={total.datasets} user={'Utilizador'} total={'Total'}/>
         <br/>
         <h5><b>Balanço do Mês</b></h5>
-        <TableMes valor={(totalRendimentos.datasets - total.datasets)} user={'Utilizador'} total={'Total'}/>
+        <TableMesBalanco valor={(totalRendimentos.datasets, total.datasets)} user={'Utilizador'} total={'Total'}/>
         <br/>
       </div>
     </div>
