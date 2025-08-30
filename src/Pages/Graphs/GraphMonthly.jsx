@@ -5,7 +5,7 @@ import Chart from 'chart.js/auto';
 import { amber, deepOrange, lightBlue } from '@mui/material/colors';
 import GraphCSS from './Graph.module.css';
 import TableMes from '../../Components/Tables/TableMes';
-import TableMesBalanco from '../../Components/Tables/TableMesBalanco';
+import TCSS from './Tables.module.css'
 
 const GraphMonthly = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -193,6 +193,16 @@ const GraphMonthly = () => {
     }
   }, [data]);
 
+  const totalR = parseFloat(totalRendimentos.valor[0].valor) +
+    parseFloat(totalRendimentos.valor[1].valor) +
+    parseFloat(totalRendimentos.valor[2].valor);
+
+  const totalD = parseFloat(total.valor[0].valor) +
+    parseFloat(total.valor[1].valor) +
+    parseFloat(total.valor[2].valor);
+
+  const totalB = totalR - totalD;
+
   return (
     <div className={GraphCSS.Top}>
       <div className={GraphCSS.Main}>
@@ -222,7 +232,20 @@ const GraphMonthly = () => {
         <TableMes valor={total.datasets} user={'Utilizador'} total={'Total'}/>
         <br/>
         <h5><b>Balanço do Mês</b></h5>
-        <TableMesBalanco valor={(totalRendimentos.datasets, total.datasets)} user={'Utilizador'} total={'Total'}/>
+          <div >
+              <table className={TCSS.categories}>
+                  <thead>
+                      <tr className={TCSS.tablerow}>
+                          <th>Total</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td>{totalB.toFixed(2)} €</td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
         <br/>
       </div>
     </div>
