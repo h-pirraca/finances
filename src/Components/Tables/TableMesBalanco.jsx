@@ -17,10 +17,12 @@ const TableMesBalanco = (propsR, propsD) => {
         <div >
             <table className={TCSS.categories}>
                 <thead>
+                    <tr className={TCSS.tablerow}>
+                        <th>Total</th>
+                    </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><b>Total</b></td>
                     <td>{total.toFixed(2)} €</td>
                 </tr>
                 </tbody>
