@@ -5,6 +5,7 @@ import Chart from 'chart.js/auto';
 import { amber, deepOrange, lightBlue } from '@mui/material/colors';
 import GraphCSS from './Graph.module.css';
 import TableMes from '../../Components/Tables/TableMes';
+import TableMesBalanco from '../../Components/Tables/TableMesBalanco';
 
 const GraphMonthly = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
