@@ -46,6 +46,8 @@ const Register = () => {
       'Miscelânea',
     ],
     Rendimentos: ['Salário', 'Subsídio', 'Estado', 'Passivos', 'Miscelâneo',],
+    Investimentos: ['Investimentos'],
+    Transferências: ['Transferências'],
   };
 
   const subcategoriaOptions = {
@@ -60,12 +62,61 @@ const Register = () => {
       'Serviços',
       'Outros',
     ],
-    Banco: ['Manutenção de Conta', 'Comissões', 'Outros'],
-    'Estado e Impostos': ['Documentos Legais', 'IRS', 'Segurança Social', 'IMI', 'IUC', 'Multas', 'Outros'],
-    Seguros: ['Saúde', 'Vida', 'Multirriscos', 'Automóvel', 'Responsabilidade Civil', 'Acidentes de Trabalho', 'Pet', 'Outros'],    
-    Pet: ['Creche', 'Treino', 'Veterinário', 'Medicamentos', 'Alimentação', 'Treats', 'Brinquedos', 'Outros'],
-    Saúde: ['Consultas', 'Urgências', 'Internamento', 'Cirurgias', 'Exames', 'Medicamentos', 'Materiais Farmácia', 'Dentista', 'Ginásio e Desporto', 'Personal Trainer', 'Massagem e Spa', 'Outros'],
-    Transportes: ['Passe', 'Zapping', 'TVDE', 'Outros'],
+    Banco: [
+      'Manutenção de Conta', 
+      'Comissões', 
+      'Outros'
+    ],
+    'Estado e Impostos': [
+      'Documentos Legais', 
+      'IRS', 
+      'Segurança Social', 
+      'IMI', 
+      'IUC', 
+      'Multas', 
+      'Outros'
+    ],
+    Seguros: [
+      'Saúde', 
+      'Vida', 
+      'Multirriscos', 
+      'Automóvel', 
+      'Responsabilidade Civil', 
+      'Acidentes de Trabalho', 
+      'Pet', 
+      'Outros'
+    ],    
+    Pet: [
+      'Creche', 
+      'Treino', 
+      'Veterinário', 
+      'Medicamentos', 
+      'Alimentação', 
+      'Treats', 
+      'Brinquedos', 
+      'Higiene', 
+      'Outros'
+    ],
+    Saúde: [
+      'Consultas', 
+      'Urgências', 
+      'Internamento', 
+      'Cirurgias', 
+      'Exames', 
+      'Medicamentos', 
+      'Materiais Farmácia', 
+      'Dentista', 
+      'Ginásio e Desporto', 
+      'Personal Trainer', 
+      'Massagem e Spa', 
+      'Outros'
+    ],
+    Transportes: [
+      'Passe', 
+      'Zapping', 
+      'TVDE', 
+      'Outros'
+    ],
     Automóvel: [
       'Combustível',
       'Estacionamento',
@@ -76,8 +127,29 @@ const Register = () => {
       'ACP',
       'Outros',
     ],
-    Refeições: ['Pequeno-Almoço', 'Almoço', 'Lanche', 'Jantar', 'Ceia', 'Snacks', 'Outros'],
-    Compras: ['Supermercado', 'Roupa', 'Calçado', 'Acessórios', 'Bagagem', 'Mobília', 'Utensílios e Têxteis', 'Eletrodomésticos', 'Tecnologia', 'Materiais Obras', 'Peças Automóvel', 'Dispositivos Médicos', 'Outros'],
+    Refeições: [
+      'Pequeno-Almoço', 
+      'Almoço', 
+      'Lanche', 
+      'Jantar', 
+      'Ceia', 
+      'Snacks', 
+      'Outros'
+    ],
+    Compras: [
+      'Supermercado', 
+      'Roupa', 'Calçado', 
+      'Acessórios', 
+      'Bagagem', 
+      'Mobília', 
+      'Utensílios e Têxteis', 
+      'Eletrodomésticos', 
+      'Tecnologia', 
+      'Materiais Obras', 
+      'Peças Automóvel', 
+      'Dispositivos Médicos', 
+      'Outros'
+    ],
     Entretenimento: [
       'Viagens e Férias',
       'Hotel',      
@@ -104,15 +176,62 @@ const Register = () => {
       'Vigilância',
       'Entregas',
       'Outros',
+      /* 
+      'Telemóvel',
+      'Streaming',
+      'Música',
+      'Servidor e Cloud',
+      'Produtividade',
+      'Segurança',
+      'Entregas',
+      'Outros'
+      */
     ],
-    Formações: ['Medicina', 'Engenharia', 'Outros'],
-    'Despesas Esporádicas': ['Prendas', 'Ordem dos Médicos', 'Cabeleireiro', 'Outros'],
-    Miscelânea: ['Levantamentos', 'Outros'],
-    Salário: ['Trabalho Dependente', 'Trabalho Independente', 'Bónus', 'Mesada', 'Pensão'],
-    Subsídio: ['Refeição', 'Férias', 'Natal'],
-    Estado: ['IRS', 'Doença'],
-    Passivos: ['Contas Poupança', 'Depósito a Prazo', 'Certificados Aforro', 'Certificados Tesouro', 'Lucros', 'Dividendos'],
-    Miscelâneo: ['Depósitos', 'Prendas', 'Prémios', 'Outros'],
+    Formações: [
+      'Medicina', 
+      'Engenharia', 
+      'Outros'
+    ],
+    'Despesas Esporádicas': [
+      'Prendas', 
+      'Ordem dos Médicos', 
+      'Cabeleireiro', 
+      'Outros'
+    ],
+    Miscelânea: [
+      'Levantamentos', 
+      'Outros'
+    ],
+    Salário: [
+      'Trabalho Dependente', 
+      'Trabalho Independente', 
+      'Bónus', 
+      'Mesada', 
+      'Pensão'
+    ],
+    Subsídio: [
+      'Refeição', 
+      'Férias', 
+      'Natal'
+    ],
+    Estado: [
+      'IRS', 
+      'Doença'
+    ],
+    Passivos: [
+      'Contas Poupança', 
+      'Depósito a Prazo', 
+      'Certificados Aforro', 
+      'Certificados Tesouro', 
+      'Lucros', 
+      'Dividendos'
+    ],
+    Miscelâneo: [
+      'Depósitos', 
+      'Prendas', 
+      'Prémios', 
+      'Outros'
+    ],
   };
 
   const subTipoOptions = [
