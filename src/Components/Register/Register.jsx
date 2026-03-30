@@ -23,12 +23,15 @@ const Register = () => {
   const tipoOptions = [
     { id: 'Despesas', name: 'Despesas' },
     { id: 'Rendimentos', name: 'Rendimentos' },
+    { id: 'Investimentos', name: 'Investimentos' },
+    { id: 'Transferências', name: 'Transferências' },
   ];
 
   const categoriaOptions = {
     Despesas: [
       'Casa',
       'Banco',
+      'Estado e Impostos',
       'Seguros',
       'Pet',
       'Saúde',
@@ -40,28 +43,28 @@ const Register = () => {
       'Subscrições',
       'Formações',
       'Despesas Esporádicas',
-      'Outros',
+      'Miscelânea',
     ],
-    Rendimentos: ['Salário', 'Subsídio', 'Bónus', 'Mesada', 'Estado', 'Extras'],
+    Rendimentos: ['Salário', 'Subsídio', 'Estado', 'Passivos', 'Miscelâneo',],
   };
 
   const subcategoriaOptions = {
     Casa: [
       'Prestação',
+      'Amortização',
       'Condominio',
-      'IMI',
       'Água',
       'Eletricidade',
       'Gás',
-      'Wi-fi',
-      'Obras',
-      'Mobília',
+      'Telecomunicações',
+      'Serviços',
       'Outros',
     ],
-    Banco: ['Manutenção de Conta', 'Outros'],
-    Seguros: ['Saúde', 'Vida', 'Multirriscos', 'Automóvel'],
-    Pet: ['Veterinário', 'Alimentação', 'Brinquedos', 'Outros'],
-    Saúde: ['Consultas', 'Exames', 'Medicamentos', 'Cirurgias', 'Outros'],
+    Banco: ['Manutenção de Conta', 'Comissões', 'Outros'],
+    'Estado e Impostos': ['Documentos Legais', 'IRS', 'Segurança Social', 'IMI', 'IUC', 'Multas', 'Outros'],
+    Seguros: ['Saúde', 'Vida', 'Multirriscos', 'Automóvel', 'Responsabilidade Civil', 'Acidentes de Trabalho', 'Pet', 'Outros'],    
+    Pet: ['Creche', 'Treino', 'Veterinário', 'Medicamentos', 'Alimentação', 'Treats', 'Brinquedos', 'Outros'],
+    Saúde: ['Consultas', 'Urgências', 'Internamento', 'Cirurgias', 'Exames', 'Medicamentos', 'Materiais Farmácia', 'Dentista', 'Ginásio e Desporto', 'Personal Trainer', 'Massagem e Spa', 'Outros'],
     Transportes: ['Passe', 'Zapping', 'TVDE', 'Outros'],
     Automóvel: [
       'Combustível',
@@ -69,54 +72,53 @@ const Register = () => {
       'Portagens',
       'Revisão',
       'Inspeção',
-      'IUC',
+      'Manutenção',
       'ACP',
-      'Arranjos',
-      'Peças',
       'Outros',
     ],
-    Refeições: ['Pequeno-Almoço', 'Almoço', 'Jantar', 'Lanche', 'Ceia', 'Outros'],
-    Compras: ['Supermercado', 'Roupa', 'Calçado', 'Outros'],
+    Refeições: ['Pequeno-Almoço', 'Almoço', 'Lanche', 'Jantar', 'Ceia', 'Snacks', 'Outros'],
+    Compras: ['Supermercado', 'Roupa', 'Calçado', 'Acessórios', 'Bagagem', 'Mobília', 'Utensílios e Têxteis', 'Eletrodomésticos', 'Tecnologia', 'Materiais Obras', 'Peças Automóvel', 'Dispositivos Médicos', 'Outros'],
     Entretenimento: [
-      'Hotel',
-      'Tecnologia',
+      'Viagens e Férias',
+      'Hotel',      
       'Jogos',
       'Cinema',
       'Teatro',
       'Concerto',
-      'Exposição',
+      'Museus',
+      'Parques',
+      'Passeios',
+      'Atividades Radicais',
       'Outros',
     ],
     Subscrições: [
       'Telemóvel',
-      'Netflix',
+      'Streaming',
       'Youtube Premium',
-      'Ginásio',
-      'Office',
-      'Antivirus',
-      'VPN',
-      'Playstation Plus',
+      'Apple',
+      'Office 365',
+      'Antivirus e VPN',
+      'Bimby Cookidoo',
+      'Tractive',
+      'Gaming',
+      'Vigilância',
+      'Entregas',
       'Outros',
     ],
     Formações: ['Medicina', 'Engenharia', 'Outros'],
     'Despesas Esporádicas': ['Prendas', 'Ordem dos Médicos', 'Cabeleireiro', 'Outros'],
-    Outros: ['Levantamentos', 'Outros'],
-    Salário: ['Salário', 'Extra', 'Pensão'],
+    Miscelânea: ['Levantamentos', 'Outros'],
+    Salário: ['Trabalho Dependente', 'Trabalho Independente', 'Bónus', 'Mesada', 'Pensão'],
     Subsídio: ['Refeição', 'Férias', 'Natal'],
-    Bónus: ['Mensal', 'Anual'],
-    Mesada: ['Mesada'],
-    Estado: ['IRS', 'Doença', 'Invalidez'],
-    Extras: ['Depósitos', 'Prendas', 'Devoluções', 'Prémios', 'Outros'],
+    Estado: ['IRS', 'Doença'],
+    Passivos: ['Contas Poupança', 'Depósito a Prazo', 'Certificados Aforro', 'Certificados Tesouro', 'Lucros', 'Dividendos'],
+    Miscelâneo: ['Depósitos', 'Prendas', 'Prémios', 'Outros'],
   };
 
   const subTipoOptions = [
     { id: 'Fixa', name: 'Fixa' },
     { id: 'Variável', name: 'Variável' },
   ]
-
-  /*const refeicaoOptions = {
-    Refeições: ['Portuguesa','Sushi','Italiano','Espanhola','Chinês','Mexicano',]
-  };*/
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
