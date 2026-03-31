@@ -31,7 +31,7 @@ const Register = () => {
     Despesas: [
       'Casa',
       'Banco',
-      'Estado e Impostos',
+      'Impostos e Documentos',
       'Seguros',
       'Pet',
       'Saúde',
@@ -67,7 +67,7 @@ const Register = () => {
       'Comissões', 
       'Outros'
     ],
-    'Estado e Impostos': [
+    'Impostos e Documentos': [
       'Documentos Legais', 
       'IRS', 
       'Segurança Social', 
