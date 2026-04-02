@@ -32,9 +32,10 @@ const Register = () => {
       'Casa',
       'Banco',
       'Impostos e Documentos',
+      'Profissão',
       'Seguros',
       'Pet',
-      'Saúde',
+      'Saúde e Wellbeing',
       'Transportes',
       'Automóvel',
       'Refeições',
@@ -42,12 +43,23 @@ const Register = () => {
       'Entretenimento',
       'Subscrições',
       'Formações',
-      'Despesas Esporádicas',
+      'Prendas e Doações',
       'Miscelânea',
     ],
-    Rendimentos: ['Salário', 'Subsídio', 'Estado', 'Passivos', 'Miscelâneo',],
-    Investimentos: ['Investimentos'],
-    Transferências: ['Transferências'],
+    Rendimentos: [
+      'Salário', 
+      'Subsídio', 
+      'Estado', 
+      'Passivos', 
+      'Miscelâneo',
+    ],
+    Investimentos: [
+      'Compra',
+      'Venda',
+    ],
+    Transferência: [
+      'Movimentos'
+    ],
   };
 
   const subcategoriaOptions = {
@@ -76,6 +88,12 @@ const Register = () => {
       'Multas', 
       'Outros'
     ],
+    Profissão: [
+      'Ordem dos Médicos',
+      'Sindicato',
+      'Conselho Geral',
+      'Outros',
+    ],
     Seguros: [
       'Saúde', 
       'Vida', 
@@ -88,16 +106,16 @@ const Register = () => {
     ],    
     Pet: [
       'Creche', 
-      'Treino', 
+      'Treino',
+      'Higiene', 
       'Veterinário', 
       'Medicamentos', 
       'Alimentação', 
       'Treats', 
-      'Brinquedos', 
-      'Higiene', 
+      'Brinquedos',   
       'Outros'
     ],
-    Saúde: [
+    'Saúde e Wellbeing': [
       'Consultas', 
       'Urgências', 
       'Internamento', 
@@ -108,7 +126,8 @@ const Register = () => {
       'Dentista', 
       'Ginásio e Desporto', 
       'Personal Trainer', 
-      'Massagem e Spa', 
+      'Massagem e Spa',
+      'Cabeleireiro', 
       'Outros'
     ],
     Transportes: [
@@ -138,13 +157,17 @@ const Register = () => {
     ],
     Compras: [
       'Supermercado', 
-      'Roupa', 'Calçado', 
+      'Roupa', 
+      'Calçado', 
       'Acessórios', 
       'Bagagem', 
       'Mobília', 
       'Utensílios e Têxteis', 
       'Eletrodomésticos', 
-      'Tecnologia', 
+      'Tecnologia',
+      'Livros',
+      'Música e Filmes',
+      'Jogos',
       'Materiais Obras', 
       'Peças Automóvel', 
       'Dispositivos Médicos', 
@@ -152,8 +175,7 @@ const Register = () => {
     ],
     Entretenimento: [
       'Viagens e Férias',
-      'Hotel',      
-      'Jogos',
+      'Hotel',
       'Cinema',
       'Teatro',
       'Concerto',
@@ -166,36 +188,24 @@ const Register = () => {
     Subscrições: [
       'Telemóvel',
       'Streaming',
-      'Youtube Premium',
-      'Apple',
-      'Office 365',
-      'Antivirus e VPN',
-      'Bimby Cookidoo',
-      'Tractive',
-      'Gaming',
-      'Vigilância',
-      'Entregas',
-      'Outros',
-      /* 
-      'Telemóvel',
-      'Streaming',
-      'Música',
       'Servidor e Cloud',
-      'Produtividade',
-      'Segurança',
+      'Software',
+      'Vigilância',
+      'Gaming',
+      'Culinária',      
       'Entregas',
       'Outros'
-      */
     ],
     Formações: [
       'Medicina', 
-      'Engenharia', 
+      'Engenharia',
+      'Línguas',
+      'Finanças', 
       'Outros'
     ],
-    'Despesas Esporádicas': [
-      'Prendas', 
-      'Ordem dos Médicos', 
-      'Cabeleireiro', 
+    'Prendas e Doações': [
+      'Prendas',
+      'Doações',
       'Outros'
     ],
     Miscelânea: [
@@ -207,29 +217,59 @@ const Register = () => {
       'Trabalho Independente', 
       'Bónus', 
       'Mesada', 
-      'Pensão'
+      'Pensão',
+      'Outros'
     ],
-    Subsídio: [
-      'Refeição', 
+    Subsídio: [      
       'Férias', 
-      'Natal'
+      'Natal',
+      'Refeição', 
+      'Ajudas de Custo',
+      'Outros'
     ],
     Estado: [
       'IRS', 
-      'Doença'
+      'Doença',
+      'Desemprego',
+      'Parental',
+      'Outros'
     ],
     Passivos: [
+      'Cashback',
       'Contas Poupança', 
       'Depósito a Prazo', 
       'Certificados Aforro', 
       'Certificados Tesouro', 
       'Lucros', 
-      'Dividendos'
+      'Dividendos',
+      'Outros'
     ],
     Miscelâneo: [
       'Depósitos', 
       'Prendas', 
       'Prémios', 
+      'Outros'
+    ],
+    Movimentos: [
+      'Entrada', 
+      'Saída'
+    ],
+    Compra: [
+      'PPR',
+      'ETFs', 
+      'Ações',
+      'Obrigações',
+      'Metais Preciosos',
+      'Criptomoedas',      
+      'Outros'
+    ],
+    Venda: [
+      'PPR',
+      'ETFs', 
+      'Ações',
+      'Obrigações',
+      'Metais Preciosos',
+      'Criptomoedas',      
       'Outros'
     ],
   };
