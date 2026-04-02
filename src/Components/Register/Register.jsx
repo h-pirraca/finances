@@ -215,7 +215,7 @@ const Register = () => {
     Salário: [
       'Trabalho Dependente', 
       'Trabalho Independente', 
-      'Bónus', 
+      'Benefícios', 
       'Mesada', 
       'Pensão',
       'Outros'
