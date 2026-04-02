@@ -57,7 +57,7 @@ const Register = () => {
       'Compra',
       'Venda',
     ],
-    Transferência: [
+    Transferências: [
       'Movimentos'
     ],
   };
